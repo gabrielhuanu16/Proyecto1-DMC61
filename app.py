@@ -48,8 +48,8 @@ elif modulo == "Ejercicio 1":
     movimiento = {"Concepto":concepto, "Tipo de Movimiento":tipo_mov, "Valor":valor}
     st.session_state.movimiento.append(movimiento)
     st.dataframe(st.session_state.movimiento)
-  suma_ingreso = sum(x["Valor"], for x in st.session_state.movimiento if x["Tipo de Movimiento"] == "Ingreso")
-  suma_gasto = sum(x["Valor"], for x in st.session_state.movimiento if x["Tipo de Movimiento"] == "Gasto")
+  suma_ingreso = sum(x["Valor"] for x in st.session_state.movimiento if x["Tipo de Movimiento"] == "Ingreso")
+  suma_gasto = sum(x["Valor"] for x in st.session_state.movimiento if x["Tipo de Movimiento"] == "Gasto")
   st.write("Total de Ingresos: ", suma_ingreso)
   st.write("Total de Gastos: ", suma_gasto)
  
