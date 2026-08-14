@@ -7,7 +7,7 @@ st.sidebar.image("DMC_logo.png", width=100)
 modulo = st.sidebar.selectbox("Seleccione un módulo", ["Home", "Ejercicio 1", "Ejercicio 2", "Ejercicio 3", "Ejercicio 4"])
 if modulo == "Home":
   st.title("Modulo 1 - Especialización en Python for Analytics")
-  st.image("DMC_logo.png", width=200)
+  st.image("DMC_logo.png", width=200, center=40)
   st.subheader("Elaborado por: Fabricio Gabriel Huánuco Rivero")
   st.divider()
   st.write("**Información General**")
