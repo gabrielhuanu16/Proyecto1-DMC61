@@ -10,6 +10,7 @@ if modulo == "Home":
   st.image("DMC_logo.png", width=200)
   st.subheader("Elaborado por: Fabricio Gabriel Huánuco Rivero")
   st.divider()
+  st.write("**Información General**")
   st.markdown("Carrera Profesional: Ingenieria de Sistemas e Informatica")
   st.markdown("Universidad: Universidad Continental")
   st.markdown("Ciclo: 6to ciclo")  
