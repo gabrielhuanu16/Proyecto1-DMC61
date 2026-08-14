@@ -15,7 +15,8 @@ if modulo == "Home":
   st.markdown("Ciclo: 6to ciclo")  
   st.markdown("Especialización: Python for Analytics")
   st.write("Año: 2026")
-  st.subheader("Este proyecto consiste en desarrollar una aplicación web utilizando Python y Streamlit, aplicando los fundamentos de programación aprendidos en el módulo Python Fundamentals. La aplicación busca presentar de manera interactiva la información y los resultados obtenidos durante el desarrollo del proyecto.")
+  st.divider()
+  st.write("Este proyecto consiste en desarrollar una aplicación web utilizando Python y Streamlit, aplicando los fundamentos de programación aprendidos en el módulo Python Fundamentals. La aplicación busca presentar de manera interactiva la información y los resultados obtenidos durante el desarrollo del proyecto.")
   st.markdown("""
   - Python
   - Streamlit
