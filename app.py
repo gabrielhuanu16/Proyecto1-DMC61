@@ -48,8 +48,11 @@ elif modulo == "Ejercicio 1":
     movimiento = {"Concepto":concepto, "Tipo de Movimiento":tipo_mov, "Valor":valor}
     st.session_state.movimiento.append(movimiento)
     st.dataframe(st.session_state.movimiento)
+  st.divider()
+  suma_ingreso = sum(movimiento["Ingreso"])
+  st.write(suma_ingreso)
     
-    
+  
 
 
   
