@@ -53,7 +53,7 @@ elif modulo == "Ejercicio 1":
   st.write("Total de Ingresos: ", suma_ingreso)
   st.write("Total de Gastos: ", suma_gasto)
   saldo_final = suma_ingreso - suma_gasto
-  st.write("Saldo Final: ", saldo_final)
+  st.write("**Saldo Final: **", saldo_final)
  
     
   
