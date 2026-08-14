@@ -46,10 +46,14 @@ elif modulo == "Ejercicio 1":
   lista_concept = []
   lista_tipo = []
   lista_valor = []
+  
   if boton1:
     lista_concept.append(concepto)
     lista_tipo.append(tipo_mov)
     lista_valor.append(valor)
+    st.write(lista_concept)
+    st.write(lista_tipo)
+    st.write(lista_valor)
 
   
 
