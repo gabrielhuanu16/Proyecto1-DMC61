@@ -35,6 +35,9 @@ elif modulo == "Ejercicio 1":
   st.divider()
   st.write("**Descripción**")
   st.markdown("Este ejercicio consiste en desarrollar una aplicación interactiva para registrar y gestionar movimientos financieros. El usuario podrá ingresar el concepto, tipo y valor de cada movimiento, clasificándolo como ingreso o gasto. La aplicación permitirá visualizar los movimientos registrados, calcular el total de ingresos y gastos, determinar el saldo final y mostrar si el flujo de caja se encuentra a favor o en contra.")
-  
+  st.divider()
+  concepto = st.number_input("Ingresar el concepto")
+  valor = st.number_input("Ingresar el valor")
+  tipo_mov = st.selectbox("Ingresar el tipo de movimiento",["Ingreso","Gasto"])
   
 
