@@ -11,12 +11,12 @@ if modulo == "Home":
   st.subheader("Elaborado por: Fabricio Gabriel Huánuco Rivero")
   st.divider()
   st.write("**Información General**")
-  st.markdown(""""
+  st.markdown("""
   - Carrera Profesional: Ingenieria de Sistemas e Informatica
   - Universidad: Universidad Continental
   - Ciclo: 6to ciclo
   - Especialización: Python for Analytics
-  """")
+  """)
   st.write("Año: 2026")
   st.divider()
   st.write("**Descripción del Proyecto**")
