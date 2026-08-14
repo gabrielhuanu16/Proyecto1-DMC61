@@ -54,7 +54,10 @@ elif modulo == "Ejercicio 1":
   st.write("Total de Gastos: ", suma_gasto)
   saldo_final = suma_ingreso - suma_gasto
   st.write("**Saldo Final:**", saldo_final)
- 
+  if saldo_final > 0:
+    st.write("**El flujo de caja está A FAVOR**")
+  elif :
+    st.write("**El flujo de caja está EN CONTRA**")
     
   
 
