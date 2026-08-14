@@ -44,7 +44,7 @@ elif modulo == "Ejercicio 1":
   if boton1:
     lista1 = {"Concepto":[concepto], "Tipo de Movimiento":[tipo_mov], "Valor":[valor]}
     tabla = st.dataframe(lista1)
-    st.write(tabla)
+  
 
   
 
