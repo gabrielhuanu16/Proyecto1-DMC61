@@ -10,6 +10,8 @@ if modulo == "Home":
   st.image("DMC_logo.png", width=200)
   st.subheader("Elaborado por: Fabricio Gabriel Huánuco Rivero")
   st.divider()
+  st.subheader("Python Fundamentals")
+  st.divider()
   st.write("**Información General**")
   st.markdown("""
   - Carrera Profesional: Ingenieria de Sistemas e Informatica
