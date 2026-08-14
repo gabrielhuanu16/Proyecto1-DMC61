@@ -15,7 +15,7 @@ if modulo == "Home":
   st.markdown("""
   - Carrera Profesional: Ingenieria de Sistemas e Informatica
   - Universidad: Universidad Continental
-  - Ciclo: 6to ciclo
+  - Ciclo: 6to
   - Especialización: Python for Analytics
   - Año: 2026
   """)
@@ -30,5 +30,7 @@ if modulo == "Home":
   - GitHub
   - NumPy
   """)
+elif modulo == "Ejercicio 1":
+  
   
 
