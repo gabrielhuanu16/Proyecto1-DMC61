@@ -23,7 +23,7 @@ if modulo == "Home":
   st.write("**Descripción del Proyecto**")
   st.write("Este proyecto consiste en desarrollar una aplicación web utilizando Python y Streamlit, aplicando los fundamentos de programación aprendidos en el módulo Python Fundamentals. La aplicación busca presentar de manera interactiva la información y los resultados obtenidos durante el desarrollo del proyecto.")
   st.divider()
-  st.write("**Tecnologías Usadas**")
+  st.write("**Tecnologías Utilizadas**")
   st.markdown("""
   - Python
   - Streamlit
@@ -31,6 +31,8 @@ if modulo == "Home":
   - NumPy
   """)
 elif modulo == "Ejercicio 1":
+  st.write("**Descripción del Ejercicio 1**")
+  st.markdown("Este ejercicio consiste en desarrollar una aplicación interactiva para registrar y gestionar movimientos financieros. El usuario podrá ingresar el concepto, tipo y valor de cada movimiento, clasificándolo como ingreso o gasto. La aplicación permitirá visualizar los movimientos registrados, calcular el total de ingresos y gastos, determinar el saldo final y mostrar si el flujo de caja se encuentra a favor o en contra.")
   
   
 
