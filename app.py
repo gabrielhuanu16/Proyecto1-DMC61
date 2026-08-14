@@ -42,14 +42,13 @@ elif modulo == "Ejercicio 1":
   valor = st.number_input("Ingresar el valor")
   boton1 = st.button("Agregar Movimiento")
   st.divider()
-  st.write("**Movimientos Registrados**")
-  st.session_state.lista_concept = []
-  st.session_state.lista_tipo = []
-  st.session_state.lista_valor = []
+  if "movimiento" not in st.session_state:
+    st.session_state.movimiento = []
   if boton1:
-    st.session_state.lista_concept.append(concepto)
-    st.session_state.lista_tipo.append(tipo_mov)
-    st.session_state.lista_valor.append(valor)
+    movimiento = {"Concepto":concepto, "Tipo de Movimiento":tipo_mov, "Valor":valor}
+    st.session_state.movimiento.append(movimiento)
+    
+    
 
 
   
