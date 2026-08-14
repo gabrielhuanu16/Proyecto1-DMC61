@@ -47,6 +47,7 @@ elif modulo == "Ejercicio 1":
   if boton1:
     movimiento = {"Concepto":concepto, "Tipo de Movimiento":tipo_mov, "Valor":valor}
     st.session_state.movimiento.append(movimiento)
+    st.session_state.movimiento.dataframe()
     
     
 
