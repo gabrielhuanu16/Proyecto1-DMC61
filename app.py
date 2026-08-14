@@ -9,10 +9,11 @@ if modulo == "Home":
   st.title("Modulo 1 - Especialización en Python for Analytics")
   st.image("DMC_logo.png", width=200)
   st.subheader("Elaborado por: Fabricio Gabriel Huánuco Rivero")
-  st.markdown("Carrera Profesional: Ingenieria de Sistemas e Informatica"
-              "Universidad: Universidad Continental"
-              "Ciclo: 6to ciclo"
-              "Especialización: Python for Analytics"
-              "Año: 2026")
+  st.markdown("Carrera Profesional: Ingenieria de Sistemas e Informatica")
+  st.markdown("Universidad: Universidad Continental")
+  st.markdown("Ciclo: 6to ciclo")  
+  st.markdown("Especialización: Python for Analytics")
+  st.markdown("Año: 2026")
+
   
 
