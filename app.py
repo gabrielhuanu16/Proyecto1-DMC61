@@ -41,9 +41,14 @@ elif modulo == "Ejercicio 1":
   tipo_mov = st.selectbox("Ingresar el tipo de movimiento",["Ingreso","Gasto"])
   valor = st.number_input("Ingresar el valor")
   boton1 = st.button("Agregar Movimiento")
+  st.divider()
+  st.write("**Movimientos Registrados**")
   if boton1:
     lista1 = {"Concepto":[concepto], "Tipo de Movimiento":[tipo_mov], "Valor":[valor]}
     tabla = st.dataframe(lista1)
+    if boton1:
+      lista1.append(concepto, tipo_mov, valor)
+      tabla = st.dataframe(lista1)
   
 
   
