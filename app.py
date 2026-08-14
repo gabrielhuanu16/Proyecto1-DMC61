@@ -9,7 +9,6 @@ if modulo == "Home":
   st.title("Modulo 1 - Especialización en Python for Analytics")
   st.image("DMC_logo.png", width=200)
   st.subheader("Elaborado por: Fabricio Gabriel Huánuco Rivero")
-  st.divider()
   st.subheader("Python Fundamentals")
   st.divider()
   st.write("**Información General**")
