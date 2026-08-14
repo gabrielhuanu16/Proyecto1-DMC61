@@ -49,7 +49,7 @@ elif modulo == "Ejercicio 1":
     st.session_state.movimiento.append(movimiento)
     st.dataframe(st.session_state.movimiento)
   st.divider()
-  suma_ingreso = sum(movimiento["Ingreso"])
+  suma_ingreso = sum(st.session_state.movimiento["Ingreso"])
   st.write(suma_ingreso)
     
   
