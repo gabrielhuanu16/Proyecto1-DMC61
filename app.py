@@ -43,10 +43,13 @@ elif modulo == "Ejercicio 1":
   boton1 = st.button("Agregar Movimiento")
   st.divider()
   st.write("**Movimientos Registrados**")
-  lista1 = {"Concepto":[concepto], "Tipo de Movimiento":[tipo_mov], "Valor":[valor]}
+  lista_concept = []
+  lista_tipo = []
+  lista_valor = []
   if boton1:
-    lista1.append()
-    tabla = st.dataframe(lista1)
+    lista_concept.append(concepto)
+    lista_tipo.append(tipo_mov)
+    lista_valor.append(valor)
 
   
 
