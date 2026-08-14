@@ -43,10 +43,9 @@ elif modulo == "Ejercicio 1":
   boton1 = st.button("Agregar Movimiento")
   st.divider()
   st.write("**Movimientos Registrados**")
-  lista_concept = []
-  lista_tipo = []
-  lista_valor = []
-  
+  st.session_state.lista_concept = []
+  st.session_state.lista_tipo = []
+  st.session_state.lista_valor = []
   if boton1:
     lista_concept.append(concepto)
     lista_tipo.append(tipo_mov)
