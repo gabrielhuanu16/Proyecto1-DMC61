@@ -16,8 +16,8 @@ if modulo == "Home":
   - Universidad: Universidad Continental
   - Ciclo: 6to ciclo
   - Especialización: Python for Analytics
+  - Año: 2026
   """)
-  st.write("Año: 2026")
   st.divider()
   st.write("**Descripción del Proyecto**")
   st.write("Este proyecto consiste en desarrollar una aplicación web utilizando Python y Streamlit, aplicando los fundamentos de programación aprendidos en el módulo Python Fundamentals. La aplicación busca presentar de manera interactiva la información y los resultados obtenidos durante el desarrollo del proyecto.")
