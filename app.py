@@ -1,6 +1,7 @@
 import streamlit as st
 import numpy as np
 import libreria_funciones as lf
+import pandas as pd
 
 st.sidebar.title("Secciones")
 st.sidebar.image("DMC_logo.png", width=100)
@@ -39,6 +40,11 @@ elif modulo == "Ejercicio 1":
   concepto = st.text_input("Ingresar el concepto")
   tipo_mov = st.selectbox("Ingresar el tipo de movimiento",["Ingreso","Gasto"])
   valor = st.number_input("Ingresar el valor")
+  boton1 = st.button("Agregar Movimiento")
+  if boton1 = True:
+    lista1 = list("Concepto":[concepto], "Tipo de Movimiento":[tipo_mov], "Valor":[valor])
+    tabla=pd.Dataframe(lista1)
+    st.write(tabla)
 
   
 
