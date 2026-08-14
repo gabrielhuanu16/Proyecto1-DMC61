@@ -41,7 +41,7 @@ elif modulo == "Ejercicio 1":
   tipo_mov = st.selectbox("Ingresar el tipo de movimiento",["Ingreso","Gasto"])
   valor = st.number_input("Ingresar el valor")
   boton1 = st.button("Agregar Movimiento")
-  if boton1 = True:
+  if boton1 == True:
     lista1 = list("Concepto":[concepto], "Tipo de Movimiento":[tipo_mov], "Valor":[valor])
     tabla=pd.Dataframe(lista1)
     st.write(tabla)
