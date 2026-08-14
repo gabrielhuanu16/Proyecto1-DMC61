@@ -11,12 +11,15 @@ if modulo == "Home":
   st.subheader("Elaborado por: Fabricio Gabriel Huánuco Rivero")
   st.divider()
   st.write("**Información General**")
-  st.markdown("Carrera Profesional: Ingenieria de Sistemas e Informatica")
-  st.markdown("Universidad: Universidad Continental")
-  st.markdown("Ciclo: 6to ciclo")  
-  st.markdown("Especialización: Python for Analytics")
+  st.markdown(""""
+  - Carrera Profesional: Ingenieria de Sistemas e Informatica
+  - Universidad: Universidad Continental
+  - Ciclo: 6to ciclo
+  - Especialización: Python for Analytics
+  """")
   st.write("Año: 2026")
   st.divider()
+  st.write("**Descripción del Proyecto**")
   st.write("Este proyecto consiste en desarrollar una aplicación web utilizando Python y Streamlit, aplicando los fundamentos de programación aprendidos en el módulo Python Fundamentals. La aplicación busca presentar de manera interactiva la información y los resultados obtenidos durante el desarrollo del proyecto.")
   st.markdown("""
   - Python
