@@ -56,7 +56,7 @@ elif modulo == "Ejercicio 1":
   st.write("**Saldo Final:**", saldo_final)
   if saldo_final > 0:
     st.write("**El flujo de caja está A FAVOR**")
-  elif :
+  elif 
     st.write("**El flujo de caja está EN CONTRA**")
     
   
