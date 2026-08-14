@@ -50,9 +50,7 @@ elif modulo == "Ejercicio 1":
     st.session_state.lista_concept.append(concepto)
     st.session_state.lista_tipo.append(tipo_mov)
     st.session_state.lista_valor.append(valor)
-    st.write(lista_concept)
-    st.write(lista_tipo)
-    st.write(lista_valor)
+
 
   
 
