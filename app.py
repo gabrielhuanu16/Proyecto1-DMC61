@@ -38,7 +38,7 @@ elif modulo == "Ejercicio 1":
   st.markdown("Este ejercicio consiste en desarrollar una aplicación interactiva para registrar y gestionar movimientos financieros. El usuario podrá ingresar el concepto, tipo y valor de cada movimiento, clasificándolo como ingreso o gasto. La aplicación permitirá visualizar los movimientos registrados, calcular el total de ingresos y gastos, determinar el saldo final y mostrar si el flujo de caja se encuentra a favor o en contra.")
   st.divider()
   concepto = st.text_input("Ingresar el concepto")
-  tipo_mov = st.selectbox("Ingresar el tipo de movimiento",["Ingreso","Gasto"])
+  tipo_mov = st.selectbox("Seleccione el tipo de movimiento",["Ingreso","Gasto"])
   valor = st.number_input("Ingresar el valor")
   boton1 = st.button("Agregar Movimiento")
   st.divider()
@@ -58,8 +58,26 @@ elif modulo == "Ejercicio 1":
     st.write("**El flujo de caja está A FAVOR**")
   else:
     st.write("**El flujo de caja está EN CONTRA**")
-    
-  
+
+elif modulo == "Ejercicio 2":
+  st.title("Ejercicio 2")
+  st.divider()
+  st.write("**Descripción**")
+  st.markdown("Este ejercicio consiste en desarrollar un formulario interactivo para registrar productos utilizando NumPy y Pandas. El usuario podrá ingresar el nombre, categoría, precio y cantidad de cada producto. A partir de estos datos se calculará el total y los registros serán almacenados en arreglos de NumPy para posteriormente convertirlos en un DataFrame, mostrando la información actualizada en pantalla.")
+  st.divider()
+  nombre_prod = st.text_input("Ingrese el nombre del producto")
+  categoria = st.selectbox("Seleccione la categoria", ["Tecnología","Alimentos","Ropa","Bebidas","Deportes","Belleza"])
+  precio = st.input_number("Ingrese el precio del producto")
+  cant = st.input_number("Ingrese la cantidad del producto")
+  precio_total = precio*cant
+  boton2 = st.button("Agregar Registro")
+  st.divider()
+  if "registro" not in st.session_state:
+    st.session_state.registro = ([])
+  if boton2:
+    registro = {"Nombre":nombre_prod, "Categoria":categoria, "Precio":precio, "Cantidad":cant, "Precio Total":precio_total}
+    st.session_state.registro.append(registro)
+  st.dataframe(st.session_state.registro)
 
 
   
