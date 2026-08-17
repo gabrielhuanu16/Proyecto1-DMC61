@@ -73,7 +73,7 @@ elif modulo == "Ejercicio 2":
   boton2 = st.button("Agregar Registro")
   st.divider()
   if "registro" not in st.session_state:
-    st.session_state.registro = ([])
+    st.session_state.registro.array = ([])
   if boton2:
     registro = {"Nombre":nombre_prod, "Categoria":categoria, "Precio":precio, "Cantidad":cant, "Precio Total":precio_total}
     st.session_state.registro.append(registro)
