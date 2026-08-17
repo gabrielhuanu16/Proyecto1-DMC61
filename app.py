@@ -69,7 +69,7 @@ elif modulo == "Ejercicio 2":
   categoria = st.selectbox("Seleccione la categoria", ["Tecnología","Alimentos","Ropa","Bebidas","Deportes","Belleza"])
   precio = st.number_input("Ingrese el precio del producto")
   cantidad = st.number_input("Ingrese la cantidad del producto", min_value=1, step=1)
-  precio_total = precio*cant
+  precio_total = precio*cantidad
   boton2 = st.button("Agregar Registro")
   st.divider()
   if "nombre" not in st.session_state:
