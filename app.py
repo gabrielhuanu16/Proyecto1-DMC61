@@ -68,16 +68,29 @@ elif modulo == "Ejercicio 2":
   nombre_prod = st.text_input("Ingrese el nombre del producto")
   categoria = st.selectbox("Seleccione la categoria", ["Tecnología","Alimentos","Ropa","Bebidas","Deportes","Belleza"])
   precio = st.number_input("Ingrese el precio del producto")
-  cant = st.number_input("Ingrese la cantidad del producto", min_value=1, step=1)
+  cantidad = st.number_input("Ingrese la cantidad del producto", min_value=1, step=1)
   precio_total = precio*cant
   boton2 = st.button("Agregar Registro")
   st.divider()
-  if "registro" not in st.session_state:
-    st.session_state.registro.array = ([])
+  if "nombre" not in st.session_state:
+    st.session_state.nombre = np.array([])
+  if "cat" not in st.session_state:
+    st.session_state.cat = np.array([])
+  if "prec" not in st.session_state:
+    st.session_state.prec = np.array([])
+  if "cant" not in st.session_state:
+    st.session_state.cant = np.array([])
+  if "total" not in st.session_state:
+    st.session_state.total = np.array([])
+    
   if boton2:
-    registro = {"Nombre":nombre_prod, "Categoria":categoria, "Precio":precio, "Cantidad":cant, "Precio Total":precio_total}
-    st.session_state.registro.append(registro)
-  st.dataframe(st.session_state.registro)
+    st.session_state.nombre = np.append(st.session_state.nombre, nombre_prod)
+    st.session_state.cat = np.append(st.session_state.cat, categoria)
+    st.session_state.prec = np.append(st.session_state.prec, precio)
+    st.session_state.cant = np.append(st.session_state.cant, cantidad)
+    st.session_state.total = np.append(st.session_state.total, precio_total)
+  registro = {"Producto":nombre, "Categoria":cat, "Precio":prec, "Cantidad":cant, "Precio Total":total}
+  st.dataframe(registro)
 
 
   
