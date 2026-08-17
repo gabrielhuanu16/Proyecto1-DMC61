@@ -68,7 +68,7 @@ elif modulo == "Ejercicio 2":
   nombre_prod = st.text_input("Ingrese el nombre del producto")
   categoria = st.selectbox("Seleccione la categoria", ["Tecnología","Alimentos","Ropa","Bebidas","Deportes","Belleza"])
   precio = st.number_input("Ingrese el precio del producto")
-  cant = st.number_input("Ingrese la cantidad del producto")
+  cant = int(st.number_input("Ingrese la cantidad del producto"))
   precio_total = precio*cant
   boton2 = st.button("Agregar Registro")
   st.divider()
