@@ -89,7 +89,7 @@ elif modulo == "Ejercicio 2":
     st.session_state.prec = np.append(st.session_state.prec, precio)
     st.session_state.cant = np.append(st.session_state.cant, cantidad)
     st.session_state.total = np.append(st.session_state.total, precio_total)
-  registro = {"Producto":nombre_prod, "Categoria":categoria, "Precio":precio, "Cantidad":cantidad, "Precio Total":precio_total}
+  registro = {"Producto":st.session_state.nombre, "Categoria":st.session_state.cat, "Precio":st.session_state.prec, "Cantidad":st.session_state.cant, "Precio Total":st.session_state.total}
   st.dataframe(registro)
 
 
