@@ -102,6 +102,6 @@ elif modulo == "Ejercicio 3":
   costos_fijos = st.number_input("Costos Fijos")
   preciov_unidad = st.number_input("Precio de Venta por Unidad")
   costov_unidad = st.number_input("Costo Variable por Unidad")
-  impuesto = st.numer_input("Impuesto")
+  impuesto = st.number_input("Impuesto")
   boton3 = st.button("Calcular Punto de Equilibrio")
   
