@@ -98,3 +98,10 @@ elif modulo == "Ejercicio 3":
   st.write("**Descripción**")
   st.markdown("Este ejercicio consiste en utilizar una función de una librería externa relacionada con el área de formación, conectándola con una interfaz interactiva en Streamlit. El usuario podrá ingresar los parámetros necesarios, ejecutar la función y visualizar el resultado. Además, los resultados obtenidos se almacenarán en un histórico mostrado mediante un DataFrame.")
   st.divider()
+  st.subheader("Punto de Equilibrio")
+  costos_fijos = st.number_input("Costos Fijos")
+  preciov_unidad = st.number_input("Precio de Venta por Unidad")
+  costov_unidad = st.number_input("Costo Variable por Unidad")
+  impuesto = st.numer_input("Impuesto")
+  boton3 = st.button("Calcular Punto de Equilibrio")
+  
