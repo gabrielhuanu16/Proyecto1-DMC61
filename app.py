@@ -100,12 +100,12 @@ elif modulo == "Ejercicio 3":
   st.divider()
   st.subheader("Punto de Equilibrio")
   costos_fijos = st.number_input("Costos Fijos")
-  preciov_unidad = st.number_input("Precio de Venta por Unidad")
-  costov_unidad = st.number_input("Costo Variable por Unidad")
-  impuesto = st.number_input("Impuesto (%)")
+  precio_unitario = st.number_input("Precio de Venta por Unidad")
+  costo_variable_unitario = st.number_input("Costo Variable por Unidad")
+  impuesto_pct = st.number_input("Impuesto (%)")
   boton3 = st.button("Calcular Punto de Equilibrio")
   if boton3:
     resultado = lf.punto_equilibrio(costos_fijos, preciov_unidad, costov_unidad, impuesto = 0)
-    tabla = pd.DataFrame({"Concepto":["Costos Fijos","Precio Venta Unidad","Costo Variable Unidad","Impuesto","Punto Equilibrio"], "Valores":[costos_fijos, preciov_unidad, costov_unidad, impuesto, resultado]})
+    tabla = pd.DataFrame({"Concepto":["Costos Fijos","Precio Venta Unidad","Costo Variable Unidad","Impuesto","Punto Equilibrio"], "Valores":[costos_fijos, precio_unitario, costo_variable_unitario, impuesto_pct, resultado]})
   
   
