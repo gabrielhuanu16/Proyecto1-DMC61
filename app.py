@@ -104,8 +104,11 @@ elif modulo == "Ejercicio 3":
   costo_variable_unitario = st.number_input("Costo Variable por Unidad")
   impuesto_pct = st.number_input("Impuesto (%)")
   boton3 = st.button("Calcular Punto de Equilibrio")
+  if "tabla" not in st.session_state:
+    st.session_state.tabla = []
   if boton3:
     resultado = lf.punto_equilibrio(costos_fijos, precio_unitario, costo_variable_unitario, impuesto_pct = 0)
-    tabla = pd.DataFrame({"Concepto":["Costos Fijos","Precio Venta Unidad","Costo Variable Unidad","Impuesto","Punto Equilibrio"], "Valores":[costos_fijos, precio_unitario, costo_variable_unitario, impuesto_pct, resultado]})
-    st.dataframe(tabla)
+    tabla = {"Costos Fijos":costos_fijos,"Precio Venta Unidad":precio_unitario,"Costo Variable Unidad":costo_variable_unitario,"Impuesto":impuesto_pct,"Punto Equilibrio":resultado}
+    st.session_state.tabla.append(tabla)
+  st.dataframe(st.session_state.tabla)
   
