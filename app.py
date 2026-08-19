@@ -4,11 +4,11 @@ import libreria_funciones as lf
 import pandas as pd
 
 st.sidebar.title("Secciones")
-st.sidebar.image("gabriel_logo_azul.png", width=100)
+st.sidebar.image("DMC_logo.png", width=100)
 modulo = st.sidebar.selectbox("Seleccione un módulo", ["Home", "Ejercicio 1", "Ejercicio 2", "Ejercicio 3", "Ejercicio 4"])
 if modulo == "Home":
   st.title("Modulo 1 - Especialización en Python for Analytics")
-  st.image("DMC_logo.png", width=200)
+  st.image("go_azul.png", width=1", width=200)
   st.subheader("Elaborado por: Fabricio Gabriel Huánuco Rivero")
   st.subheader("Python Fundamentals")
   st.divider()
