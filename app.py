@@ -110,5 +110,6 @@ elif modulo == "Ejercicio 3":
     resultado = lf.punto_equilibrio(costos_fijos, precio_unitario, costo_variable_unitario, impuesto_pct)
     tabla = {"Costos Fijos":costos_fijos,"Precio Venta Unidad":precio_unitario,"Costo Variable Unidad":costo_variable_unitario,"Impuesto":impuesto_pct,"Punto Equilibrio":resultado}
     st.session_state.tabla.append(tabla)
+  st.divider()
   st.dataframe(st.session_state.tabla)
   
