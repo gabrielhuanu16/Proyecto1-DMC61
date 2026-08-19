@@ -91,3 +91,10 @@ elif modulo == "Ejercicio 2":
     st.session_state.total = np.append(st.session_state.total, precio_total)
   registro = pd.DataFrame({"Producto":st.session_state.nombre, "Categoria":st.session_state.cat, "Precio":st.session_state.prec, "Cantidad":st.session_state.cant, "Precio Total":st.session_state.total})
   st.dataframe(registro)
+
+elif modulo == "Ejercicio 3":
+  st.title("Ejercicio 3")
+  st.divider()
+  st.write("**Descripción**")
+  st.markdown("Este ejercicio consiste en utilizar una función de una librería externa relacionada con el área de formación, conectándola con una interfaz interactiva en Streamlit. El usuario podrá ingresar los parámetros necesarios, ejecutar la función y visualizar el resultado. Además, los resultados obtenidos se almacenarán en un histórico mostrado mediante un DataFrame.")
+  st.divider()
