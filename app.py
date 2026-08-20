@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 import libreria_funciones as lf
 import pandas as pd
-import libreria_clases_ as lc
+import libreria_clases as lc
 
 st.sidebar.title("Secciones")
 st.sidebar.image("DMC_logo.png", width=100)
