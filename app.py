@@ -132,7 +132,7 @@ else:
   if boton_guardar:
     try:
       nuevo_servidor = Servidor(nombre=nombre_serv, tiempo_total_h=tiempo_total,
-                               tiempo_caida_h=tiempo_caida, almacenamiento_total_gb=almacenamiento_total
+                               tiempo_caida_h=tiempo_caida, almacenamiento_total_gb=almacenamiento_total,
                                almacenamiento_usado_gb=almacanamiento_usado)
       resumen = nuevo_servidor.resumen()
       st.session_state.registro = st.session_state.registro.append(resumen)
