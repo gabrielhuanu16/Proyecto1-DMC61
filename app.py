@@ -112,4 +112,11 @@ elif modulo == "Ejercicio 3":
     st.session_state.tabla.append(tabla)
   st.divider()
   st.dataframe(st.session_state.tabla)
+
+else:
+  st.title("Ejercicio 4")
+  st.divider()
+  st.write("**Descripción**")
+  st.markdown("Este ejercicio consiste en utilizar una clase de la librería externa libreria_clases_proyecto1.py e integrarla con Streamlit. La aplicación permitirá crear, visualizar, actualizar y eliminar registros (CRUD) mediante formularios y widgets interactivos.")
+  st.divider()
   
