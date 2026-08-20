@@ -123,9 +123,9 @@ else:
   st.subheader("Tecnología/Informática")
   nombre_serv = st.text_input("Nombre de tu Servidor")
   tiempo_total = st.number_input("Total de Hora a Evaludas", min_value=1, step=1)
-  tiempo_caida = st.number_input("Horas que estubo caído", min_value=1, step=1)
-  almacenamiento_total = st.number_input("Almacenamiento Total en GB", min_value=1, step=1)
-  almacanamiento_usado = st.number_input("Almacenamiento Usado en GB", min_value=1, step=1)
+  tiempo_caida = st.number_input("Horas que estubo caído", step=1)
+  almacenamiento_total = st.number_input("Almacenamiento Total en GB", step=1)
+  almacanamiento_usado = st.number_input("Almacenamiento Usado en GB", step=1)
   boton_guardar = st.button("Guardar Servidor")
   if "registro" is not st.session_state:
     st.session_state.registro = []
@@ -136,6 +136,7 @@ else:
                                almacenamiento_usado_gb=almacanamiento_usado)
       resumen = nuevo_servidor.resumen()
       st.session_state.registro = st.session_state.registro.append(resumen)
+  st.dataframe(st.session_state.registro)
     except ValueError as e:
       st.error(f"Error en los datos: {e}")
     
