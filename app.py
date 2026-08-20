@@ -136,8 +136,8 @@ else:
                                almacenamiento_usado_gb=almacanamiento_usado)
       resumen = nuevo_servidor.resumen()
       st.session_state.registro = st.session_state.registro.append(resumen)
-  st.dataframe(st.session_state.registro)
     except ValueError as e:
       st.error(f"Error en los datos: {e}")
+   st.dataframe(st.session_state.registro)
     
   
