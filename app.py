@@ -138,6 +138,6 @@ else:
       st.session_state.registro = st.session_state.registro.append(resumen)
     except ValueError as e:
       st.error(f"Error en los datos: {e}")
-   st.dataframe(st.session_state.registro)
+  st.dataframe(st.session_state.registro)
     
   
