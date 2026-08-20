@@ -127,7 +127,7 @@ else:
   almacenamiento_total = st.number_input("Almacenamiento Total en GB", step=1)
   almacanamiento_usado = st.number_input("Almacenamiento Usado en GB", step=1)
   boton_guardar = st.button("Guardar Servidor")
-  if "registro" is not st.session_state:
+  if "registro" not in st.session_state:
     st.session_state.registro = []
   if boton_guardar:
     try:
@@ -135,7 +135,7 @@ else:
                                tiempo_caida_h=tiempo_caida, almacenamiento_total_gb=almacenamiento_total,
                                almacenamiento_usado_gb=almacanamiento_usado)
       resumen = nuevo_servidor.resumen()
-      st.session_state.registro = st.session_state.registro.append(resumen)
+      st.session_state.registro.append(resumen)
       st.dataframe(st.session_state.registro)
     except ValueError as e:
       st.error(f"Error en los datos: {e}")
