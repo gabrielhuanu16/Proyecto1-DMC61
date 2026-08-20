@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 import libreria_funciones as lf
 import pandas as pd
-import librería_clases_proyecto1 as lc
+import libreria_clases_ as lc
 
 st.sidebar.title("Secciones")
 st.sidebar.image("DMC_logo.png", width=100)
@@ -131,7 +131,7 @@ else:
     st.session_state.registro = []
   if boton_guardar:
     try:
-      nuevo_servidor = Servidor(nombre=nombre_serv, tiempo_total_h=tiempo_total,
+      nuevo_servidor = lc.Servidor(nombre=nombre_serv, tiempo_total_h=tiempo_total,
                                tiempo_caida_h=tiempo_caida, almacenamiento_total_gb=almacenamiento_total,
                                almacenamiento_usado_gb=almacanamiento_usado)
       resumen = nuevo_servidor.resumen()
