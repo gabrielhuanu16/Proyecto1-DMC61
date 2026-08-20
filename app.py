@@ -2,6 +2,7 @@ import streamlit as st
 import numpy as np
 import libreria_funciones as lf
 import pandas as pd
+import librería_clases_proyecto1 as lc
 
 st.sidebar.title("Secciones")
 st.sidebar.image("DMC_logo.png", width=100)
@@ -119,4 +120,21 @@ else:
   st.write("**Descripción**")
   st.markdown("Este ejercicio consiste en utilizar una clase de la librería externa libreria_clases_proyecto1.py e integrarla con Streamlit. La aplicación permitirá crear, visualizar, actualizar y eliminar registros (CRUD) mediante formularios y widgets interactivos.")
   st.divider()
+  st.subheader("Tecnología/Informática")
+  nombre_serv = st.text_input("Nombre de tu Servidor")
+  tiempo_total = st.number_input("Total de Hora a Evaludas", min_value=1, step=1)
+  tiempo_caida = st.number_input("Horas que estubo caído", min_value=1, step=1)
+  almacenamiento_total = st.number_input("Almacenamiento Total en GB", min_value=1, step=1)
+  almacanamiento_usado = st.number_input("Almacenamiento Usado en GB", min_value=1, step=1)
+  boton_guardar = st.button("Guardar Servidor")
+  if "registro" is not st.session_state:
+    st.session_state.registro = []
+  if boton_guardar:
+    try:
+      nuevo_servidor = Servidor(nombre=nombre_serv, tiempo_total_h=tiempo_total,
+                               tiempo_caida_h=tiempo_caida, almacenamiento_total_gb=almacenamiento_total
+                               almacenamiento_usado_gb=almacanamiento_usado)
+      resumen = nuevo_servidor.resumen()
+      st.session_state.registro = st.session_state.registro.append(resumen)
+    
   
