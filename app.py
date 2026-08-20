@@ -127,6 +127,7 @@ else:
   almacenamiento_total = st.number_input("Almacenamiento Total en GB", step=1)
   almacanamiento_usado = st.number_input("Almacenamiento Usado en GB", step=1)
   boton_guardar = st.button("Guardar Servidor")
+  st.divider()
   if "registro" not in st.session_state:
     st.session_state.registro = []
   if boton_guardar:
