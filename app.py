@@ -135,7 +135,7 @@ elif modulo == "Ejercicio 4":
       nuevo_servidor = lc.Servidor(nombre=nombre_serv, tiempo_total_h=tiempo_total,
                                tiempo_caida_h=tiempo_caida, almacenamiento_total_gb=almacenamiento_total,
                                almacenamiento_usado_gb=almacanamiento_usado)
-      st.session_state.registro.append({"ID":len(st.session_state.registro)+1,nuevo_servidor })
+      st.session_state.registro.append("ID":len(st.session_state.registro)+1,nuevo_servidor)
       st.dataframe(st.session_state.registro)
     except ValueError as e:
       st.error(f"Error en los datos: {e}")
