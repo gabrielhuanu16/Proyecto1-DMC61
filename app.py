@@ -121,34 +121,41 @@ elif modulo == "Ejercicio 4":
   st.markdown("Este ejercicio consiste en utilizar una clase de la librería externa libreria_clases_proyecto1.py e integrarla con Streamlit. La aplicación permitirá crear, visualizar, actualizar y eliminar registros (CRUD) mediante formularios y widgets interactivos.")
   st.divider()
   st.subheader("Tecnología/Informática")
-  tab1, tab2 = st.tabs(["Crear Servidor", "Actualizar Servidor"])
-  nombre_serv = st.text_input("Nombre de tu Servidor")
-  tiempo_total = st.number_input("Total de Hora a Evaludas", min_value=1, step=1)
-  tiempo_caida = st.number_input("Horas que estubo caído", step=1)
-  almacenamiento_total = st.number_input("Almacenamiento Total en GB", step=1)
-  almacenamiento_usado = st.number_input("Almacenamiento Usado en GB", step=1)
-  boton_guardar = st.button("Guardar Servidor")
-  st.divider()
-  if "registro" not in st.session_state:
-    st.session_state.registro = []
-  if boton_guardar:
-    nuevo_servidor = lc.Servidor(nombre=nombre_serv, tiempo_total_h=tiempo_total,
-                               tiempo_caida_h=tiempo_caida, almacenamiento_total_gb=almacenamiento_total,
-                               almacenamiento_usado_gb=almacenamiento_usado)
-    st.session_state.registro.append({"ID": len(st.session_state.registro) + 1, **nuevo_servidor.resumen()})
+  tab1, tab2, tab3 = st.tabs(["Crear Servidor", "Actualizar Servidor","Eliminar Servidor"])
+  with tab1:
+    nombre_serv = st.text_input("Nombre de tu Servidor")
+    tiempo_total = st.number_input("Total de Hora a Evaludas", min_value=1, step=1)
+    tiempo_caida = st.number_input("Horas que estubo caído", step=1)
+    almacenamiento_total = st.number_input("Almacenamiento Total en GB", step=1)
+    almacenamiento_usado = st.number_input("Almacenamiento Usado en GB", step=1)
+    boton_guardar = st.button("Guardar Servidor")
+    st.divider()
+    if "registro" not in st.session_state:
+      st.session_state.registro = []
+    if boton_guardar:
+      nuevo_servidor = lc.Servidor(nombre=nombre_serv, tiempo_total_h=tiempo_total,
+                                 tiempo_caida_h=tiempo_caida, almacenamiento_total_gb=almacenamiento_total,
+                                 almacenamiento_usado_gb=almacenamiento_usado)
+      st.session_state.registro.append({"ID": len(st.session_state.registro) + 1, **nuevo_servidor.resumen()})
+    st.dataframe(st.session_state.registro)
+  with tab2:
   st.subheader("Actualizar")
-  id_actualizar = st.number_input("Ingrese el ID que desea Actualizar",min_value=1, step=1)
-  
-  boton_actualizar = st.button("Actualizar Servidor")
-  if boton_actualizar:
-    if id_actualizar <= len(st.session_state.registro):
-      actualizar = lc.Servidor(nombre=nombre_serv, tiempo_total_h=tiempo_total, 
-                               tiempo_caida_h=tiempo_caida, almacenamiento_total_gb=almacenamiento_total, 
-                               almacenamiento_usado_gb=almacenamiento_usado)
-      st.session_state.registro[id_actualizar - 1] = {"ID": id_actualizar, **actualizar.resumen()}
-    else:
-      st.error("Ese ID no existe todavía.")
-  st.dataframe(st.session_state.registro)
+  id_actualizar = st.number_input("Ingrese el ID que desea Actualizar", min_value=1, step=1)
+    nuevo_nombre = st.text_input("Nuevo Nombre", key="act_nom")
+    nuevo_t_total = st.number_input("Nuevas Horas a Evaluar", min_value=1, step=1, key="act_ht")
+    nuevo_t_caida = st.number_input("Nuevas Horas caído", step=1, key="act_hc")
+    nuevo_alm_total = st.number_input("Nuevo Almacenamiento Total", step=1, key="act_at")
+    nuevo_alm_usado = st.number_input("Nuevo Almacenamiento Usado", step=1, key="act_au")
+    
+    boton_actualizar = st.button("Actualizar Servidor")
+    
+    if boton_actualizar:
+      if id_actualizar <= len(st.session_state.registro):
+        actualizar = lc.Servidor(nuevo_nombre, nuevo_t_total, nuevo_t_caida, nuevo_alm_total, nuevo_alm_usado)
+        st.session_state.registro[id_actualizar - 1] = {"ID": id_actualizar, **actualizar.resumen()}
+      else:
+        st.error("Ese ID no existe todavía.")
+    st.dataframe(st.session_state.registro)
 
   
 
