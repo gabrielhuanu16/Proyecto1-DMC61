@@ -142,7 +142,7 @@ elif modulo == "Ejercicio 4":
   boton_actualizar = st.button("Actualizar Servidor")
   if boton_actualizar:
     actualizar = lc.Servidor(nombre_serv, tiempo_total, tiempo_caida, almacenamiento_total, almacenamiento_usado)
-        st.session_state.registro[id_act - 1] = {"ID": id_act, **actualizar.resumen()}
+    st.session_state.registro[id_act - 1] = {"ID": id_act, **actualizar.resumen()}
     
 
   
