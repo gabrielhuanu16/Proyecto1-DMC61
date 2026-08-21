@@ -131,13 +131,10 @@ elif modulo == "Ejercicio 4":
   if "registro" not in st.session_state:
     st.session_state.registro = []
   if boton_guardar:
-    try:
-      nuevo_servidor = lc.Servidor(nombre=nombre_serv, tiempo_total_h=tiempo_total,
+    nuevo_servidor = lc.Servidor(nombre=nombre_serv, tiempo_total_h=tiempo_total,
                                tiempo_caida_h=tiempo_caida, almacenamiento_total_gb=almacenamiento_total,
                                almacenamiento_usado_gb=almacenamiento_usado)
-      st.session_state.registro.append(registro)
-    except ValueError as e:
-      st.error(f"Error en los datos: {e}")
+    st.session_state.registro.append(registro)
   st.dataframe(st.session_state.registro)
   st.divider()
     
