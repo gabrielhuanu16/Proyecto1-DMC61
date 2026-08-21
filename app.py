@@ -121,6 +121,7 @@ elif modulo == "Ejercicio 4":
   st.markdown("Este ejercicio consiste en utilizar una clase de la librería externa libreria_clases_proyecto1.py e integrarla con Streamlit. La aplicación permitirá crear, visualizar, actualizar y eliminar registros (CRUD) mediante formularios y widgets interactivos.")
   st.divider()
   st.subheader("Tecnología/Informática")
+  tab1, tab2 = st.tabs(["Crear Servidor", "Actualizar Servidor"])
   nombre_serv = st.text_input("Nombre de tu Servidor")
   tiempo_total = st.number_input("Total de Hora a Evaludas", min_value=1, step=1)
   tiempo_caida = st.number_input("Horas que estubo caído", step=1)
@@ -136,7 +137,8 @@ elif modulo == "Ejercicio 4":
                                almacenamiento_usado_gb=almacenamiento_usado)
     st.session_state.registro.append({"ID": len(st.session_state.registro) + 1, **nuevo_servidor.resumen()})
   st.subheader("Actualizar")
-  id_actualizar = st.number_input("Ingrese el ID que sea Actualizar",min_value=1, step=1)
+  id_actualizar = st.number_input("Ingrese el ID que desea Actualizar",min_value=1, step=1)
+  
   boton_actualizar = st.button("Actualizar Servidor")
   if boton_actualizar:
     if id_actualizar <= len(st.session_state.registro):
