@@ -127,6 +127,7 @@ elif modulo == "Ejercicio 4":
   if "next_id" not in st.session_state:
     st.session_state.next_id = 1
   with tab1:
+      st.subheader("Crear Registro")
       nombre_serv = st.text_input("Nombre de tu Servidor")
       tiempo_total = st.number_input("Total de Hora a Evaludas", min_value=1, step=1)
       tiempo_caida = st.number_input("Horas que estubo caído", step=1)
