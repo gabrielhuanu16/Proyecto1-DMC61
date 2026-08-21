@@ -31,6 +31,7 @@ if modulo == "Home":
   - Streamlit
   - GitHub
   - NumPy
+  - Pandas
   """)
 elif modulo == "Ejercicio 1":
   st.title("Ejercicio 1")
