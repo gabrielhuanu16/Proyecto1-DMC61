@@ -126,51 +126,51 @@ elif modulo == "Ejercicio 4":
       st.session_state.registro = []
   if "next_id" not in st.session_state:
     st.session_state.next_id = 1
-with tab1:
-    nombre_serv = st.text_input("Nombre de tu Servidor")
-    tiempo_total = st.number_input("Total de Hora a Evaludas", min_value=1, step=1)
-    tiempo_caida = st.number_input("Horas que estubo caído", step=1)
-    almacenamiento_total = st.number_input("Almacenamiento Total en GB", step=1)
-    almacenamiento_usado = st.number_input("Almacenamiento Usado en GB", step=1)
-    boton_guardar = st.button("Guardar Servidor")
-    if boton_guardar:
-        nuevo_servidor = lc.Servidor(nombre=nombre_serv, tiempo_total_h=tiempo_total,
-                                   tiempo_caida_h=tiempo_caida, almacenamiento_total_gb=almacenamiento_total,
-                                   almacenamiento_usado_gb=almacenamiento_usado)
-        st.session_state.registro.append({"ID": st.session_state.next_id, **nuevo_servidor.resumen()})
-        st.session_state.next_id += 1
-with tab2:
-    st.subheader("Actualizar")
-    id_actualizar = st.number_input("Ingrese el ID que desea Actualizar", min_value=1, step=1)
-    nuevo_nombre = st.text_input("Nuevo Nombre", key="act_nom")
-    nuevo_t_total = st.number_input("Nuevas Horas a Evaluar", min_value=1, step=1, key="act_ht")
-    nuevo_t_caida = st.number_input("Nuevas Horas caído", step=1, key="act_hc")
-    nuevo_alm_total = st.number_input("Nuevo Almacenamiento Total", step=1, key="act_at")
-    nuevo_alm_usado = st.number_input("Nuevo Almacenamiento Usado", step=1, key="act_au")
-    boton_actualizar = st.button("Actualizar Servidor")
-    if boton_actualizar:
-        encontrado = False
-        for x in st.session_state.registro:
-            if x["ID"] == id_actualizar:
-                actualizar = lc.Servidor(nuevo_nombre, nuevo_t_total, nuevo_t_caida, nuevo_alm_total, nuevo_alm_usado)
-                x.update(actualizar.resumen())  # Actualiza los datos manteniendo su mismo ID
-                encontrado = True
-                break
-        if not encontrado:
-            st.error("Ese ID no existe.")
-with tab3:
-    st.subheader("Eliminar Registro")
-    id_eliminar = st.number_input("Ingrese el ID que desea Eliminar", min_value=1, step=1, key="elim_id")    
-    boton_eliminar = st.button("Eliminar Servidor")    
-    if boton_eliminar:
-        encontrado = False
-        for x in st.session_state.registro:
-            if x["ID"] == id_eliminar:
-                st.session_state.registro.remove(x)  # ¡Tal cual como tu ejemplo!
-                encontrado = True
-                break               
-        if not encontrado:
-            st.error("Ese ID no existe.")
-st.dataframe(st.session_state.registro)
+  with tab1:
+      nombre_serv = st.text_input("Nombre de tu Servidor")
+      tiempo_total = st.number_input("Total de Hora a Evaludas", min_value=1, step=1)
+      tiempo_caida = st.number_input("Horas que estubo caído", step=1)
+      almacenamiento_total = st.number_input("Almacenamiento Total en GB", step=1)
+      almacenamiento_usado = st.number_input("Almacenamiento Usado en GB", step=1)
+      boton_guardar = st.button("Guardar Servidor")
+      if boton_guardar:
+          nuevo_servidor = lc.Servidor(nombre=nombre_serv, tiempo_total_h=tiempo_total,
+                                     tiempo_caida_h=tiempo_caida, almacenamiento_total_gb=almacenamiento_total,
+                                     almacenamiento_usado_gb=almacenamiento_usado)
+          st.session_state.registro.append({"ID": st.session_state.next_id, **nuevo_servidor.resumen()})
+          st.session_state.next_id += 1
+  with tab2:
+      st.subheader("Actualizar")
+      id_actualizar = st.number_input("Ingrese el ID que desea Actualizar", min_value=1, step=1)
+      nuevo_nombre = st.text_input("Nuevo Nombre", key="act_nom")
+      nuevo_t_total = st.number_input("Nuevas Horas a Evaluar", min_value=1, step=1, key="act_ht")
+      nuevo_t_caida = st.number_input("Nuevas Horas caído", step=1, key="act_hc")
+      nuevo_alm_total = st.number_input("Nuevo Almacenamiento Total", step=1, key="act_at")
+      nuevo_alm_usado = st.number_input("Nuevo Almacenamiento Usado", step=1, key="act_au")
+      boton_actualizar = st.button("Actualizar Servidor")
+      if boton_actualizar:
+          encontrado = False
+          for x in st.session_state.registro:
+              if x["ID"] == id_actualizar:
+                  actualizar = lc.Servidor(nuevo_nombre, nuevo_t_total, nuevo_t_caida, nuevo_alm_total, nuevo_alm_usado)
+                  x.update(actualizar.resumen())  # Actualiza los datos manteniendo su mismo ID
+                  encontrado = True
+                  break
+          if not encontrado:
+              st.error("Ese ID no existe.")
+  with tab3:
+      st.subheader("Eliminar Registro")
+      id_eliminar = st.number_input("Ingrese el ID que desea Eliminar", min_value=1, step=1, key="elim_id")    
+      boton_eliminar = st.button("Eliminar Servidor")    
+      if boton_eliminar:
+          encontrado = False
+          for x in st.session_state.registro:
+              if x["ID"] == id_eliminar:
+                  st.session_state.registro.remove(x)  # ¡Tal cual como tu ejemplo!
+                  encontrado = True
+                  break               
+          if not encontrado:
+              st.error("Ese ID no existe.")
+  st.dataframe(st.session_state.registro)
     
   
