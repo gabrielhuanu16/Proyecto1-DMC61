@@ -137,7 +137,6 @@ elif modulo == "Ejercicio 4":
                                  tiempo_caida_h=tiempo_caida, almacenamiento_total_gb=almacenamiento_total,
                                  almacenamiento_usado_gb=almacenamiento_usado)
       st.session_state.registro.append({"ID": len(st.session_state.registro) + 1, **nuevo_servidor.resumen()})
-    st.dataframe(st.session_state.registro)
   with tab2:
     st.subheader("Actualizar")
     id_actualizar = st.number_input("Ingrese el ID que desea Actualizar", min_value=1, step=1)
@@ -155,7 +154,20 @@ elif modulo == "Ejercicio 4":
         st.session_state.registro[id_actualizar - 1] = {"ID": id_actualizar, **actualizar.resumen()}
       else:
         st.error("Ese ID no existe todavía.")
-    st.dataframe(st.session_state.registro)
+  with tab3:
+    st.subheader("Eliminar Registro")
+    id_eliminar = st.number_input("Ingrese el ID que desea Eliminar", min_value=1, step=1, key="elim_id")
+    
+    boton_eliminar = st.button("Eliminar Servidor")
+    
+    if boton_eliminar:
+      if id_eliminar <= len(st.session_state.registro):
+        st.session_state.registro.pop(id_eliminar - 1)     
+        for i, registro in enumerate(st.session_state.registro):
+            registro["ID"] = i + 1
+      else:
+        st.error("Ese ID no existe todavía.")
+  st.dataframe(st.session_state.registro)
 
   
 
