@@ -114,7 +114,7 @@ elif modulo == "Ejercicio 3":
   st.divider()
   st.dataframe(st.session_state.tabla)
 
-else:
+elif modulo == "Ejercicio 4":
   st.title("Ejercicio 4")
   st.divider()
   st.write("**Descripción**")
