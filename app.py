@@ -139,8 +139,8 @@ elif modulo == "Ejercicio 4":
       st.session_state.registro.append({"ID": len(st.session_state.registro) + 1, **nuevo_servidor.resumen()})
     st.dataframe(st.session_state.registro)
   with tab2:
-  st.subheader("Actualizar")
-  id_actualizar = st.number_input("Ingrese el ID que desea Actualizar", min_value=1, step=1)
+    st.subheader("Actualizar")
+    id_actualizar = st.number_input("Ingrese el ID que desea Actualizar", min_value=1, step=1)
     nuevo_nombre = st.text_input("Nuevo Nombre", key="act_nom")
     nuevo_t_total = st.number_input("Nuevas Horas a Evaluar", min_value=1, step=1, key="act_ht")
     nuevo_t_caida = st.number_input("Nuevas Horas caído", step=1, key="act_hc")
