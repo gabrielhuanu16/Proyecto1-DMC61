@@ -135,8 +135,7 @@ else:
       nuevo_servidor = lc.Servidor(nombre=nombre_serv, tiempo_total_h=tiempo_total,
                                tiempo_caida_h=tiempo_caida, almacenamiento_total_gb=almacenamiento_total,
                                almacenamiento_usado_gb=almacanamiento_usado)
-      resumen = nuevo_servidor.resumen()
-      st.session_state.registro.append(resumen)
+      st.session_state.registro.append(nuevo_servidor)
       st.dataframe(st.session_state.registro)
     except ValueError as e:
       st.error(f"Error en los datos: {e}")
