@@ -166,7 +166,8 @@ class Servidor:
     uso de almacenamiento y estado general.
     """
 
-    def __init__(self, nombre, tiempo_total_h, tiempo_caida_h, almacenamiento_total_gb, almacenamiento_usado_gb):
+    def __init__(self,id_servidor, nombre, tiempo_total_h, tiempo_caida_h, almacenamiento_total_gb, almacenamiento_usado_gb):
+        self.id_servidor = id_servidor
         self.nombre = nombre
         self.tiempo_total_h = tiempo_total_h
         self.tiempo_caida_h = tiempo_caida_h
