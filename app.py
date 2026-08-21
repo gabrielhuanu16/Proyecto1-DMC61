@@ -136,10 +136,10 @@ elif modulo == "Ejercicio 4":
                                tiempo_caida_h=tiempo_caida, almacenamiento_total_gb=almacenamiento_total,
                                almacenamiento_usado_gb=almacanamiento_usado)
       st.session_state.registro.append(nuevo_servidor)
-  st.dataframe(st.session_state.registro)
     except ValueError as e:
       st.error(f"Error en los datos: {e}")
-    st.divider()
+  st.dataframe(st.session_state.registro)
+  st.divider()
     
 
   
