@@ -137,6 +137,12 @@ elif modulo == "Ejercicio 4":
     st.session_state.registro.append({"ID": len(st.session_state.registro) + 1, **nuevo_servidor.resumen()})
   st.dataframe(st.session_state.registro)
   st.divider()
+  st.subheader("Actualizar")
+  id_actualizar = st.number_input("Ingrese el ID que sea Actualizar")
+  boton_actualizar = st.button("Actualizar Servidor")
+  if boton_actualizar:
+    actualizar = lc.Servidor(nombre_serv, tiempo_total, tiempo_caida, almacenamiento_total, almacenamiento_usado)
+        st.session_state.registro[id_act - 1] = {"ID": id_act, **actualizar.resumen()}
     
 
   
