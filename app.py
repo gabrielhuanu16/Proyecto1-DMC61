@@ -134,7 +134,7 @@ elif modulo == "Ejercicio 4":
     try:
       nuevo_servidor = lc.Servidor(nombre=nombre_serv, tiempo_total_h=tiempo_total,
                                tiempo_caida_h=tiempo_caida, almacenamiento_total_gb=almacenamiento_total,
-                               almacenamiento_usado_gb=almacanamiento_usado)
+                               almacenamiento_usado_gb=almacenamiento_usado)
       st.session_state.registro.append(nuevo_servidor)
     except ValueError as e:
       st.error(f"Error en los datos: {e}")
